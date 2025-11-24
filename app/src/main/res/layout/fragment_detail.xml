@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detailRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e1f2fe"
+        android:padding="16dp">
+
+        <!-- details (visible when not editing)! -->
+        <LinearLayout
+            android:id="@+id/detailLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/btnEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretty_font"
+                android:text="Name:"
+                android:textColor="#77625C"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretty_font"
+                android:text="Style:"
+                android:textColor="#77625C"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textMaterial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretty_font"
+                android:text="Material:"
+                android:textColor="#77625C"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretty_font"
+                android:text="Color:"
+                android:textColor="#77625C"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textComfort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretty_font"
+                android:text="Comfort:"
+                android:textColor="#77625C"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textOccasion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretty_font"
+                android:text="Occasion:"
+                android:textColor="#77625C"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- Edit Form Layout (visible when editing)!!! -->
+        <LinearLayout
+            android:id="@+id/editLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/btnEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/inputName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretty_font"
+                android:hint="Item Name" />
+
+            <EditText
+                android:id="@+id/inputStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretty_font"
+                android:hint="Style" />
+
+            <EditText
+                android:id="@+id/inputMaterial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretty_font"
+                android:hint="Material" />
+
+            <EditText
+                android:id="@+id/inputColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretty_font"
+                android:hint="Color" />
+
+            <EditText
+                android:id="@+id/inputComfort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretty_font"
+                android:hint="Comfort Level (1–10)"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/inputOccasion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretty_font"
+                android:hint="Occasion" />
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Delete Item"
+                android:backgroundTint="#FFCDD2"
+                android:textColor="#49392c"
+                android:fontFamily="@font/pretty_font" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="@style/MyButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Back to List"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnSave" />
+
+        <Button
+            android:id="@+id/btnEdit"
+            style="@style/MyButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnSave"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/MyButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnCancel"
+            app:layout_constraintStart_toEndOf="@+id/btnEdit" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

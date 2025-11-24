@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add!!!"
+        android:textColor="#49392c"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/clothesEdit"
+        app:layout_constraintEnd_toStartOf="@+id/addCancelButton"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toEndOf="@+id/addSaveButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.885" />
+
+
+    <Button
+        android:id="@+id/addSaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Save!"
+        style="@style/MyButtonStyle"
+        app:layout_constraintBottom_toTopOf="@+id/clothesEdit"
+        app:layout_constraintEnd_toStartOf="@+id/addCancelButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/addCancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Cancel"
+        style="@style/MyButtonStyle"
+        app:layout_constraintBottom_toTopOf="@+id/clothesEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/addSaveButton" />
+
+    <ScrollView
+        android:id="@+id/clothesEdit"
+        android:layout_width="292dp"
+        android:layout_height="293dp"
+        android:background="#AA98d2eb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/detailContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#b2b1cf"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/inputName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Item Name" />
+
+            <EditText
+                android:id="@+id/inputStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Style" />
+
+            <EditText
+                android:id="@+id/inputMaterial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Material" />
+
+            <EditText
+                android:id="@+id/inputColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Color" />
+
+            <EditText
+                android:id="@+id/inputComfort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Comfort Level (1–10)"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/inputOccasion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Occasion" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<!-- res/values/styles.xml -->
+<resources>
+    <!-- Button Style <3  2 be pretty -->
+    <style name="MyButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="backgroundTint">#b2b1cf</item>
+        <item name="android:fontFamily">@font/pretty_font</item>
+        <item name="android:textColor">#49392c</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:layout_margin">4dp</item>
+    </style>
+</resources>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ClosetApp_V2</string>
+    <string name="my_closet">My Closet</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create Account</string>
+    <string name="forgot_user">Forgot User?</string>
+    <string name="forgot_pw">Forgot pw?</string>
+    <string name="button_for_logging_in_after_entering_login_info">Button for logging in after entering login info</string>
+    <string name="tops">Tops</string>
+    <string name="Bottoms">Bottoms</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
